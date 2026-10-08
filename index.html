@@ -11,7 +11,7 @@
   <style>
     :root {
       --bg-color: #0b0f19;
-      --card-bg: rgba(22, 31, 49, 0.7);
+      --card-bg: rgba(22, 31, 49, 0.75);
       --accent-color: #00f2fe;
       --accent-gradient: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
       --text-color: #e2e8f0;
@@ -46,7 +46,7 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background: rgba(11, 15, 25, 0.85);
+      background: rgba(11, 15, 25, 0.9);
       backdrop-filter: blur(10px);
       padding: 15px 30px;
       display: flex;
@@ -67,7 +67,7 @@
     nav ul {
       display: flex;
       list-style: none;
-      gap: 20px;
+      gap: 15px;
     }
 
     nav a {
@@ -76,6 +76,7 @@
       font-weight: 500;
       transition: 0.3s;
       cursor: pointer;
+      font-size: 0.95rem;
     }
 
     nav a:hover, nav a.active {
@@ -91,7 +92,7 @@
 
     .page-section {
       display: none;
-      animation: fadeIn 0.5s ease-in-out forwards;
+      animation: fadeIn 0.4s ease-in-out forwards;
     }
 
     .page-section.active {
@@ -106,11 +107,11 @@
     /* Hero Section */
     .hero {
       text-align: center;
-      padding: 60px 20px;
+      padding: 50px 20px;
     }
 
     .hero h1 {
-      font-size: 3rem;
+      font-size: 2.8rem;
       margin-bottom: 10px;
     }
 
@@ -121,9 +122,9 @@
     }
 
     .typing-text {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       color: var(--text-dim);
-      margin-bottom: 30px;
+      margin-bottom: 25px;
       min-height: 30px;
     }
 
@@ -173,7 +174,7 @@
       border-radius: 15px;
       padding: 25px;
       margin-bottom: 25px;
-      backdrop-filter: blur(5px);
+      backdrop-filter: blur(8px);
     }
 
     .grid-2 {
@@ -186,7 +187,7 @@
     .stats-container {
       display: flex;
       justify-content: space-around;
-      margin: 40px 0;
+      margin: 35px 0;
       flex-wrap: wrap;
       gap: 20px;
     }
@@ -196,17 +197,17 @@
     }
 
     .stat-number {
-      font-size: 2.5rem;
+      font-size: 2.3rem;
       font-weight: 700;
       color: var(--accent-color);
     }
 
-    /* Interactive Game & Quiz */
+    /* Quiz Widget */
     .quiz-option {
       display: block;
       width: 100%;
       padding: 12px;
-      margin: 8px 0;
+      margin: 10px 0;
       background: rgba(255, 255, 255, 0.05);
       border: 1px solid rgba(255, 255, 255, 0.1);
       color: #fff;
@@ -218,6 +219,19 @@
 
     .quiz-option:hover {
       background: rgba(0, 242, 254, 0.2);
+      border-color: var(--accent-color);
+    }
+
+    /* Interactive Estimator / Calculator */
+    .calculator-box input, .calculator-box select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      background: rgba(0,0,0,0.3);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: #fff;
+      border-radius: 8px;
     }
 
     /* Form Styles */
@@ -240,6 +254,14 @@
       color: #fff;
     }
 
+    .review-item {
+      background: rgba(255, 255, 255, 0.03);
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 10px;
+      border-left: 3px solid var(--accent-color);
+    }
+
     footer {
       text-align: center;
       padding: 20px;
@@ -260,9 +282,10 @@
     <nav>
       <ul>
         <li><a onclick="showSection('home')" class="nav-link active" id="nav-home">Home</a></li>
-        <li><a onclick="showSection('data-guide')" class="nav-link" id="nav-data-guide">Data Entry Guide</a></li>
-        <li><a onclick="showSection('linkedin-guide')" class="nav-link" id="nav-linkedin-guide">LinkedIn Tips</a></li>
-        <li><a onclick="showSection('arcade')" class="nav-link" id="nav-arcade">Arcade & Quiz</a></li>
+        <li><a onclick="showSection('data-guide')" class="nav-link" id="nav-data-guide">Data Guide</a></li>
+        <li><a onclick="showSection('estimator')" class="nav-link" id="nav-estimator">Estimator</a></li>
+        <li><a onclick="showSection('arcade')" class="nav-link" id="nav-arcade">10-Quiz Arcade</a></li>
+        <li><a onclick="showSection('feedback')" class="nav-link" id="nav-feedback">Reviews & Feedback</a></li>
         <li><a onclick="showSection('connect')" class="nav-link" id="nav-connect">Connect</a></li>
       </ul>
     </nav>
@@ -277,7 +300,7 @@
         <div class="typing-text" id="typing-text"></div>
         <div class="btn-group">
           <a href="https://www.linkedin.com/in/prantasarkar" target="_blank" class="btn btn-primary"><i class="fab fa-linkedin"></i> Connect on LinkedIn</a>
-          <button onclick="showSection('connect')" class="btn btn-outline"><i class="fas fa-paper-plane"></i> Send Direct Message</button>
+          <button onclick="showSection('arcade')" class="btn btn-outline"><i class="fas fa-gamepad"></i> Play 10 Tech Quizzes</button>
         </div>
       </div>
 
@@ -292,18 +315,18 @@
         </div>
         <div class="stat-box">
           <div class="stat-number">24/7</div>
-          <p>Professional Support</p>
+          <p>Client Support</p>
         </div>
       </div>
 
       <div class="grid-2">
         <div class="card">
           <h3><i class="fas fa-database" style="color: var(--accent-color);"></i> Data Entry Specialist</h3>
-          <p style="margin-top: 10px; color: var(--text-dim);">Proficient in Microsoft Excel, B2B Lead Generation, Data Mining, and Web Research. Delivering clean, structured, and accurate business datasets.</p>
+          <p style="margin-top: 10px; color: var(--text-dim);">Proficient in MS Excel, B2B Lead Generation, Data Mining, and Web Research. Delivering clean, structured, and accurate business datasets.</p>
         </div>
         <div class="card">
           <h3><i class="fas fa-code" style="color: var(--accent-color);"></i> Web Developer</h3>
-          <p style="margin-top: 10px; color: var(--text-dim);">Building sleek, high-performing websites with HTML5, CSS3, JavaScript, and responsive modern framework concepts.</p>
+          <p style="margin-top: 10px; color: var(--text-dim);">Building modern, responsive, and fast interactive websites using HTML5, CSS3, JavaScript, and UI frameworks.</p>
         </div>
       </div>
     </section>
@@ -311,84 +334,128 @@
     <!-- DATA ENTRY GUIDE SECTION -->
     <section id="data-guide" class="page-section">
       <div class="card">
-        <h2><i class="fas fa-book-open"></i> Complete Step-by-Step Data Entry Guide</h2>
-        <p style="color: var(--text-dim); margin-top: 10px;">Master professional data entry practices with this curated industry framework.</p>
+        <h2><i class="fas fa-book-open"></i> Complete Data Entry & Lead Gen Guide</h2>
+        <p style="color: var(--text-dim); margin-top: 10px;">Master professional data entry and lead scraping processes easily.</p>
       </div>
 
       <div class="card">
-        <h3>Step 1: Raw Data Collection & Scraping</h3>
-        <p style="color: var(--text-dim); margin-top: 5px;">Identify structured sources such as directories, Google Maps, or LinkedIn Sales Navigator to aggregate verified contact information.</p>
+        <h3>1. Data Mining & Extraction</h3>
+        <p style="color: var(--text-dim); margin-top: 5px;">Extracting target leads from LinkedIn Sales Navigator, Directories, and Google Maps with total precision.</p>
       </div>
 
       <div class="card">
-        <h3>Step 2: Cleaning & Standardization</h3>
-        <p style="color: var(--text-dim); margin-top: 5px;">Utilize Advanced MS Excel functions (PROPER, TRIM, REMOVE DUPLICATES) to standardize text entries and remove redundant data points.</p>
+        <h3>2. Cleaning & Formatting</h3>
+        <p style="color: var(--text-dim); margin-top: 5px;">Using advanced Excel formulas like TRIM, PROPER, VLOOKUP, and duplicate removers to keep spreadsheets 100% clean.</p>
       </div>
 
       <div class="card">
-        <h3>Step 3: Verification & Quality Assurance</h3>
-        <p style="color: var(--text-dim); margin-top: 5px;">Verify email addresses using tools like ZeroBounce or Hunter.io to ensure high deliverability and zero bounce rates.</p>
+        <h3>3. Verification & Quality Check</h3>
+        <p style="color: var(--text-dim); margin-top: 5px;">Verifying target emails with ZeroBounce & Hunter.io to achieve high inbox delivery and minimum bounce rates.</p>
       </div>
     </section>
 
-    <!-- LINKEDIN TIPS SECTION -->
-    <section id="linkedin-guide" class="page-section">
-      <div class="card">
-        <h2><i class="fab fa-linkedin"></i> How to Grow Your LinkedIn Account Fast</h2>
-        <p style="color: var(--text-dim); margin-top: 10px;">Proven strategies to build a massive, targeted network on LinkedIn.</p>
-      </div>
+    <!-- PROJECT ESTIMATOR / SERVICE CALCULATOR -->
+    <section id="estimator" class="page-section">
+      <div class="card calculator-box">
+        <h2><i class="fas fa-calculator"></i> Interactive Project Estimator</h2>
+        <p style="color: var(--text-dim); margin-top: 5px; margin-bottom: 20px;">Calculate the estimated time and scope for your project.</p>
+        
+        <label>Select Service Category:</label>
+        <select id="calc-type" onchange="calculateProject()">
+          <option value="10">Data Entry / Lead Generation</option>
+          <option value="25">Web Development / Website Setup</option>
+          <option value="15">Database Formatting & Cleaning</option>
+        </select>
 
-      <div class="grid-2">
-        <div class="card">
-          <h3>1. Optimize Banner & Headline</h3>
-          <p style="color: var(--text-dim); margin-top: 5px;">Your headline should explain what problem you solve, not just your designation. Example: <i>"Helping Businesses Grow via B2B Lead Gen & Data Entry"</i>.</p>
-        </div>
-        <div class="card">
-          <h3>2. Daily Targeted Connections</h3>
-          <p style="color: var(--text-dim); margin-top: 5px;">Send 20-30 personalized connection requests daily to industry professionals and decision-makers.</p>
+        <label>Estimated Units / Hours Needed:</label>
+        <input type="number" id="calc-units" value="10" min="1" oninput="calculateProject()">
+
+        <div style="background: rgba(0,242,254,0.1); padding: 15px; border-radius: 10px; margin-top: 15px;">
+          <h4>Estimated Completion Time: <span id="est-time" style="color: var(--accent-color);">1-2 Days</span></h4>
+          <p style="color: var(--text-dim); margin-top: 5px;">Ready to proceed? Send a message directly via LinkedIn.</p>
         </div>
       </div>
     </section>
 
-    <!-- ARCADE & QUIZ SECTION -->
+    <!-- 10-QUESTION QUIZ ARCADE SECTION -->
     <section id="arcade" class="page-section">
       <div class="card">
-        <h2><i class="fas fa-gamepad"></i> Tech & Data Trivia Quiz</h2>
-        <p style="color: var(--text-dim); margin-top: 5px;">Test your knowledge and spend some fun time!</p>
+        <h2><i class="fas fa-gamepad"></i> Tech & Data Trivia Challenge (10 Questions)</h2>
+        <p style="color: var(--text-dim); margin-top: 5px; margin-bottom: 20px;">Test your tech skills! Answer all 10 questions to see your final score.</p>
         
-        <div id="quiz-container" style="margin-top: 20px;">
-          <h4 id="quiz-question">Which Excel formula is used to clean extra spaces from text?</h4>
-          <button class="quiz-option" onclick="checkAnswer(this, false)">A) =CLEAN()</button>
-          <button class="quiz-option" onclick="checkAnswer(this, true)">B) =TRIM()</button>
-          <button class="quiz-option" onclick="checkAnswer(this, false)">C) =REMOVE()</button>
-          <p id="quiz-result" style="margin-top: 15px; font-weight: 600;"></p>
+        <div id="quiz-box">
+          <div style="display: flex; justify-content: space-between; font-weight: 600; margin-bottom: 10px;">
+            <span id="quiz-progress" style="color: var(--accent-color);">Question 1 of 10</span>
+            <span id="quiz-score">Score: 0</span>
+          </div>
+
+          <h3 id="quiz-question" style="margin-bottom: 15px;">Question text loading...</h3>
+          <div id="quiz-options"></div>
+        </div>
+
+        <div id="quiz-result-box" style="display: none; text-align: center; padding: 20px;">
+          <h2 style="color: var(--accent-color);">🏆 Quiz Completed!</h2>
+          <p id="final-score-text" style="font-size: 1.3rem; margin: 15px 0;"></p>
+          <button onclick="restartQuiz()" class="btn btn-primary"><i class="fas fa-redo"></i> Play Again</button>
         </div>
       </div>
     </section>
 
-    <!-- CONNECT / FRIEND REQUEST SECTION -->
+    <!-- REVIEWS & FEEDBACK SECTION -->
+    <section id="feedback" class="page-section">
+      <div class="card">
+        <h2><i class="fas fa-comments"></i> Visitor Feedback & Reviews</h2>
+        <p style="color: var(--text-dim); margin-top: 5px; margin-bottom: 20px;">Leave your thoughts or read what other visitors say about this portfolio.</p>
+
+        <form onsubmit="addReview(event)">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" id="rev-name" required placeholder="Enter your name">
+          </div>
+          <div class="form-group">
+            <label>Your Feedback / Comment</label>
+            <textarea id="rev-comment" rows="3" required placeholder="Write your review here..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary"><i class="fas fa-comment-dots"></i> Submit Feedback</button>
+        </form>
+
+        <h3 style="margin-top: 30px; margin-bottom: 15px;">Recent Feedback:</h3>
+        <div id="reviews-list">
+          <div class="review-item">
+            <strong>Rahul Sharma</strong> <span style="color: var(--accent-color);">★★★★★</span>
+            <p style="color: var(--text-dim); font-size: 0.9rem; margin-top: 5px;">Very impressive portfolio! The quizzes and design look awesome.</p>
+          </div>
+          <div class="review-item">
+            <strong>Ananya Das</strong> <span style="color: var(--accent-color);">★★★★★</span>
+            <p style="color: var(--text-dim); font-size: 0.9rem; margin-top: 5px;">Super fast data entry guidelines. Great work Pranta!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONNECT SECTION -->
     <section id="connect" class="page-section">
       <div class="card">
-        <h2><i class="fas fa-user-plus"></i> Send a Direct Connection Request</h2>
-        <p style="color: var(--text-dim); margin-top: 5px; margin-bottom: 20px;">Fill out this form to send a message or connection invite directly to Pranta Sarkar.</p>
+        <h2><i class="fas fa-paper-plane"></i> Direct Message Pranta Sarkar</h2>
+        <p style="color: var(--text-dim); margin-top: 5px; margin-bottom: 20px;">Have a project proposal or inquiry? Fill out the form below.</p>
 
         <form onsubmit="handleFormSubmit(event)">
           <div class="form-group">
-            <label>Your Name</label>
-            <input type="text" required placeholder="Enter your full name">
+            <label>Your Full Name</label>
+            <input type="text" required placeholder="Enter your name">
           </div>
           <div class="form-group">
             <label>Your Email / LinkedIn Profile</label>
-            <input type="text" required placeholder="Enter your email or profile link">
+            <input type="text" required placeholder="Enter profile link or email">
           </div>
           <div class="form-group">
-            <label>Message / Note</label>
-            <textarea rows="4" required placeholder="Type your message here..."></textarea>
+            <label>Message</label>
+            <textarea rows="4" required placeholder="Type your project details here..."></textarea>
           </div>
-          <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Send Request</button>
+          <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Send Message</button>
         </form>
         <div id="form-response" style="margin-top: 15px; color: var(--accent-color); display: none;">
-          Thank you! Your request has been recorded. Let's connect on LinkedIn!
+          Thank you! Redirecting to LinkedIn profile...
         </div>
       </div>
     </section>
@@ -396,11 +463,11 @@
   </div>
 
   <footer>
-    <p>&copy; 2026 Pranta Sarkar. All Rights Reserved. Designed with Precision.</p>
+    <p>&copy; 2026 Pranta Sarkar. All Rights Reserved. Built for high performance.</p>
   </footer>
 
   <script>
-    // Tab Navigation Logic
+    // Tab Navigation
     function showSection(sectionId) {
       document.querySelectorAll('.page-section').forEach(el => el.classList.remove('active'));
       document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('active'));
@@ -409,8 +476,8 @@
       document.getElementById('nav-' + sectionId).classList.add('active');
     }
 
-    // Typing Effect Logic
-    const phrases = ["Data Entry Specialist", "Web Developer", "B2B Lead Generation Expert", "Digital Marketing Enthusiast"];
+    // Typing Effect
+    const phrases = ["Data Entry Specialist", "Web Developer", "B2B Lead Generation Expert", "Database Administrator"];
     let i = 0, j = 0, isDeleting = false;
     
     function typeEffect() {
@@ -438,35 +505,111 @@
     }
     typeEffect();
 
-    // Quiz Check
-    function checkAnswer(btn, isCorrect) {
-      const result = document.getElementById("quiz-result");
-      if(isCorrect) {
-        result.textContent = "🎉 Correct Answer! '=TRIM()' removes extra spaces.";
-        result.style.color = "#00f2fe";
+    // Project Estimator Logic
+    function calculateProject() {
+      const units = document.getElementById('calc-units').value;
+      const timeBox = document.getElementById('est-time');
+      if(units <= 15) {
+        timeBox.textContent = "1 Day (Express Delivery)";
+      } else if(units <= 50) {
+        timeBox.textContent = "2 - 3 Days";
       } else {
-        result.textContent = "❌ Incorrect! Try again.";
-        result.style.color = "#ff4757";
+        timeBox.textContent = "4 - 7 Days";
       }
     }
 
-    // Form Submit Simulation
+    // 10 Question Quiz Array
+    const quizData = [
+      { q: "Which Excel formula removes extra spaces from text?", options: ["=CLEAN()", "=TRIM()", "=REMOVE()", "=PROPER()"], correct: 1 },
+      { q: "What does HTML stand for?", options: ["HyperText Markup Language", "High Text Marketing Logic", "Hyperlink Text Manipulation", "Home Text Main Language"], correct: 0 },
+      { q: "Which shortcut key is used to search data in Excel?", options: ["Ctrl + S", "Ctrl + F", "Ctrl + H", "Ctrl + Z"], correct: 1 },
+      { q: "What is B2B Lead Generation?", options: ["Business to Consumer Sales", "Business to Business Lead Contact Research", "Banking to Business Loans", "Broadband Internet Service"], correct: 1 },
+      { q: "Which language is used for styling web pages?", options: ["HTML", "Python", "CSS", "SQL"], correct: 2 },
+      { q: "In Excel, what does VLOOKUP stand for?", options: ["Variable Lookup", "Vertical Lookup", "Vector Lookup", "Visual Lookup"], correct: 1 },
+      { q: "Which domain extension is used for professional websites?", options: [".com", ".exe", ".apk", ".txt"], correct: 0 },
+      { q: "What tool is useful for email verification?", options: ["Hunter.io", "Photoshop", "VLC Player", "MS Paint"], correct: 0 },
+      { q: "Which programming language makes websites interactive?", options: ["CSS", "HTML", "JavaScript", "SQL"], correct: 2 },
+      { q: "What is the maximum character limit in a standard tweet / post snippet?", options: ["280", "1000", "50", "5000"], correct: 0 }
+    ];
+
+    let currentQ = 0;
+    let score = 0;
+
+    function loadQuiz() {
+      if(currentQ >= quizData.length) {
+        document.getElementById('quiz-box').style.display = 'none';
+        document.getElementById('quiz-result-box').style.display = 'block';
+        document.getElementById('final-score-text').textContent = `You scored ${score} out of ${quizData.length}!`;
+        return;
+      }
+
+      const q = quizData[currentQ];
+      document.getElementById('quiz-progress').textContent = `Question ${currentQ + 1} of ${quizData.length}`;
+      document.getElementById('quiz-score').textContent = `Score: ${score}`;
+      document.getElementById('quiz-question').textContent = q.q;
+
+      const optsBox = document.getElementById('quiz-options');
+      optsBox.innerHTML = '';
+
+      q.options.forEach((opt, idx) => {
+        const btn = document.createElement('button');
+        btn.className = 'quiz-option';
+        btn.textContent = `${String.fromCharCode(65 + idx)}) ${opt}`;
+        btn.onclick = () => selectQuizAnswer(idx);
+        optsBox.appendChild(btn);
+      });
+    }
+
+    function selectQuizAnswer(selectedIdx) {
+      if(selectedIdx === quizData[currentQ].correct) {
+        score++;
+      }
+      currentQ++;
+      loadQuiz();
+    }
+
+    function restartQuiz() {
+      currentQ = 0;
+      score = 0;
+      document.getElementById('quiz-box').style.display = 'block';
+      document.getElementById('quiz-result-box').style.display = 'none';
+      loadQuiz();
+    }
+    loadQuiz();
+
+    // Feedback System
+    function addReview(e) {
+      e.preventDefault();
+      const name = document.getElementById('rev-name').value;
+      const comment = document.getElementById('rev-comment').value;
+
+      const list = document.getElementById('reviews-list');
+      const item = document.createElement('div');
+      item.className = 'review-item';
+      item.innerHTML = `<strong>${name}</strong> <span style="color: var(--accent-color);">★★★★★</span><p style="color: var(--text-dim); font-size: 0.9rem; margin-top: 5px;">${comment}</p>`;
+      
+      list.prepend(item);
+      document.getElementById('rev-name').value = '';
+      document.getElementById('rev-comment').value = '';
+    }
+
+    // Form Simulation with LinkedIn Redirect
     function handleFormSubmit(e) {
       e.preventDefault();
       document.getElementById('form-response').style.display = 'block';
       setTimeout(() => {
         window.open('https://www.linkedin.com/in/prantasarkar', '_blank');
-      }, 1500);
+      }, 1200);
     }
 
-    // Interactive Node & Particle Canvas Background
+    // Background Canvas Particle Animation
     const canvas = document.getElementById('bg-canvas');
     const ctx = canvas.getContext('2d');
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
     let particlesArray = [];
-    const numberOfParticles = 70;
+    const numberOfParticles = 65;
 
     class Particle {
       constructor() {
