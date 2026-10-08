@@ -3,11 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>ProNexa | Created by Pranta Sarkar</title>
-
-<meta name="description"
-content="ProNexa — a modern professional networking, creation and skill competition platform created by Pranta Sarkar.">
+<title>ProNexa Next | Pranta Sarkar</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,9 +14,7 @@ content="ProNexa — a modern professional networking, creation and skill compet
 
 :root{
   --bg:#05070d;
-  --bg2:#0a0f1b;
   --card:rgba(13,20,34,.78);
-  --card2:#101a2c;
   --line:rgba(255,255,255,.09);
   --text:#eef5ff;
   --muted:#8fa1bb;
@@ -88,6 +82,9 @@ a{
   text-decoration:none;
 }
 
+
+/* ================= BACKGROUND ================= */
+
 #particles{
   position:fixed;
   inset:0;
@@ -125,14 +122,22 @@ a{
 
 .glow{
   position:fixed;
+
   width:380px;
   height:380px;
+
   border-radius:50%;
+
   filter:blur(100px);
+
   opacity:.12;
+
   pointer-events:none;
+
   z-index:-1;
+
   background:#00d9ff;
+
   animation:float 10s ease-in-out infinite;
 }
 
@@ -144,16 +149,20 @@ a{
 .glow.two{
   right:-150px;
   top:45%;
+
   background:#8a5cff;
+
   animation-delay:-4s;
 }
 
 @keyframes float{
+
   50%{
     transform:
     translate(70px,40px)
     scale(1.12);
   }
+
 }
 
 
@@ -162,17 +171,20 @@ a{
 .topbar{
   position:sticky;
   top:0;
+
   z-index:1000;
 
   height:72px;
 
   border-bottom:1px solid var(--line);
 
-  background:rgba(5,7,13,.78);
+  background:
+  rgba(5,7,13,.78);
 
   backdrop-filter:blur(22px);
 
   display:flex;
+
   align-items:center;
 
   gap:24px;
@@ -206,19 +218,22 @@ a{
 .search{
   flex:1;
   max-width:520px;
+
   position:relative;
 }
 
 .search input{
   width:100%;
 
-  background:rgba(255,255,255,.045);
+  background:
+  rgba(255,255,255,.045);
 
   border:1px solid var(--line);
 
   border-radius:14px;
 
-  padding:11px 15px 11px 40px;
+  padding:
+  11px 15px 11px 40px;
 
   color:#fff;
 
@@ -226,10 +241,12 @@ a{
 }
 
 .search input:focus{
-  border-color:rgba(0,229,255,.5);
+  border-color:
+  rgba(0,229,255,.5);
 
   box-shadow:
-  0 0 0 4px rgba(0,229,255,.06);
+  0 0 0 4px
+  rgba(0,229,255,.06);
 }
 
 .search:before{
@@ -249,7 +266,9 @@ a{
   margin-left:auto;
 
   display:flex;
+
   gap:8px;
+
   align-items:center;
 }
 
@@ -257,22 +276,27 @@ a{
 .avatar-btn{
   border:1px solid var(--line);
 
-  background:rgba(255,255,255,.04);
+  background:
+  rgba(255,255,255,.04);
 
   color:#fff;
 
   border-radius:12px;
 
   min-width:42px;
+
   height:42px;
 }
 
 .avatar-btn{
   display:flex;
+
   align-items:center;
+
   gap:8px;
 
-  padding:4px 10px 4px 4px;
+  padding:
+  4px 10px 4px 4px;
 }
 
 .avatar{
@@ -282,13 +306,12 @@ a{
   border-radius:50%;
 
   display:grid;
+
   place-items:center;
 
   background:var(--grad);
 
   font-weight:800;
-
-  color:#fff;
 }
 
 
@@ -314,7 +337,9 @@ a{
 .sidebar,
 .rightbar{
   position:sticky;
+
   top:94px;
+
   height:max-content;
 }
 
@@ -366,22 +391,27 @@ a{
 .nav-item.active{
   color:#fff;
 
-  background:rgba(0,229,255,.07);
+  background:
+  rgba(0,229,255,.07);
 
-  border-color:rgba(0,229,255,.12);
+  border-color:
+  rgba(0,229,255,.12);
 
-  transform:translateX(2px);
+  transform:
+  translateX(2px);
 }
 
 .nav-icon{
   width:25px;
+
   text-align:center;
 }
 
 .profile-mini{
   padding:18px;
 
-  border-bottom:1px solid var(--line);
+  border-bottom:
+  1px solid var(--line);
 
   margin-bottom:8px;
 }
@@ -395,6 +425,7 @@ a{
   background:var(--grad);
 
   display:grid;
+
   place-items:center;
 
   font-size:1.25rem;
@@ -422,7 +453,8 @@ a{
 .view{
   display:none;
 
-  animation:enter .45s ease;
+  animation:
+  enter .45s ease;
 }
 
 .view.active{
@@ -430,6 +462,7 @@ a{
 }
 
 @keyframes enter{
+
   from{
     opacity:0;
     transform:translateY(12px);
@@ -439,6 +472,7 @@ a{
     opacity:1;
     transform:none;
   }
+
 }
 
 
@@ -480,7 +514,9 @@ a{
   width:260px;
   height:260px;
 
-  border:1px solid rgba(0,229,255,.18);
+  border:
+  1px solid
+  rgba(0,229,255,.18);
 
   border-radius:50%;
 
@@ -488,8 +524,11 @@ a{
   top:-80px;
 
   box-shadow:
-  0 0 0 35px rgba(0,229,255,.025),
-  0 0 0 70px rgba(0,229,255,.02);
+  0 0 0 35px
+  rgba(0,229,255,.025),
+
+  0 0 0 70px
+  rgba(0,229,255,.02);
 }
 
 .eyebrow{
@@ -509,7 +548,8 @@ a{
 .hero h1{
   font-family:"Space Grotesk";
 
-  font-size:clamp(
+  font-size:
+  clamp(
     2.3rem,
     6vw,
     4.7rem
@@ -555,7 +595,8 @@ a{
 /* ================= BUTTONS ================= */
 
 .btn{
-  border:1px solid var(--line);
+  border:
+  1px solid var(--line);
 
   border-radius:13px;
 
@@ -563,7 +604,8 @@ a{
 
   color:#fff;
 
-  background:rgba(255,255,255,.045);
+  background:
+  rgba(255,255,255,.045);
 
   transition:.25s;
 
@@ -571,7 +613,8 @@ a{
 }
 
 .btn:hover{
-  transform:translateY(-2px);
+  transform:
+  translateY(-2px);
 
   border-color:
   rgba(0,229,255,.45);
@@ -588,12 +631,20 @@ a{
 }
 
 .btn.success{
-  background:rgba(53,230,154,.1);
+  background:
+  rgba(53,230,154,.1);
 
   border-color:
   rgba(53,230,154,.3);
 
   color:var(--green);
+}
+
+.btn.danger{
+  color:#ff9db2;
+
+  border-color:
+  rgba(255,93,125,.25);
 }
 
 
@@ -680,7 +731,8 @@ a{
   border:1px solid var(--line);
 
   box-shadow:
-  0 15px 45px rgba(0,0,0,.18);
+  0 15px 45px
+  rgba(0,0,0,.18);
 }
 
 .card h3{
@@ -748,7 +800,7 @@ a{
 }
 
 
-/* ================= PAGE HEADER ================= */
+/* ================= PAGE HEAD ================= */
 
 .page-head{
   margin-bottom:18px;
@@ -790,9 +842,11 @@ a{
 .field select{
   width:100%;
 
-  background:rgba(0,0,0,.25);
+  background:
+  rgba(0,0,0,.25);
 
-  border:1px solid var(--line);
+  border:
+  1px solid var(--line);
 
   border-radius:12px;
 
@@ -816,38 +870,6 @@ a{
   rgba(0,229,255,.5);
 }
 
-
-/* ================= AUTH ================= */
-
-.auth-tabs{
-  display:grid;
-
-  grid-template-columns:
-  1fr 1fr;
-
-  margin-bottom:18px;
-}
-
-.auth-tabs button{
-  padding:12px;
-
-  border:1px solid var(--line);
-
-  background:rgba(255,255,255,.03);
-
-  color:var(--muted);
-}
-
-.auth-tabs button.active{
-  background:
-  rgba(0,229,255,.1);
-
-  color:#fff;
-}
-
-
-/* ================= NOTICE ================= */
-
 .notice{
   padding:12px 14px;
 
@@ -856,7 +878,8 @@ a{
   background:
   rgba(53,230,154,.08);
 
-  border:1px solid
+  border:
+  1px solid
   rgba(53,230,154,.2);
 
   color:#c9ffe9;
@@ -872,6 +895,152 @@ a{
   rgba(255,93,125,.25);
 
   color:#ffd0da;
+}
+
+
+/* ================= CREATOR ================= */
+
+.creator-intro{
+  margin-top:18px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:18px;
+
+  padding:18px 20px;
+
+  border:
+  1px solid
+  rgba(0,229,255,.18);
+
+  background:
+  linear-gradient(
+    135deg,
+    rgba(0,229,255,.07),
+    rgba(124,92,255,.07)
+  );
+
+  border-radius:20px;
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+.creator-copy .mini-label{
+  font-size:.72rem;
+
+  text-transform:uppercase;
+
+  letter-spacing:.15em;
+
+  color:var(--cyan);
+
+  font-weight:800;
+}
+
+.creator-copy h3{
+  margin:4px 0 5px;
+
+  font-size:1.15rem;
+}
+
+.creator-copy p{
+  margin:0;
+
+  color:var(--muted);
+
+  line-height:1.6;
+
+  font-size:.9rem;
+
+  max-width:720px;
+}
+
+.creator-actions{
+  display:flex;
+
+  gap:9px;
+
+  flex-wrap:wrap;
+}
+
+
+/* LinkedIn button */
+
+.linkedin-btn{
+  white-space:nowrap;
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:8px;
+
+  background:
+  linear-gradient(
+    90deg,
+    #ff9933 0 33%,
+    #fff 33% 66%,
+    #138808 66%
+  );
+
+  color:#071018!important;
+
+  border:0;
+
+  box-shadow:
+  0 8px 25px
+  rgba(255,153,51,.15);
+}
+
+.fun-note{
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:7px;
+
+  margin-top:14px;
+
+  padding:8px 12px;
+
+  border:
+  1px solid
+  rgba(255,255,255,.09);
+
+  border-radius:999px;
+
+  background:
+  rgba(255,255,255,.035);
+
+  font-size:.78rem;
+
+  color:#cbd5e1;
+}
+
+.creator-footer{
+  margin:26px 0 8px;
+
+  padding:18px 4px;
+
+  text-align:center;
+
+  color:var(--muted);
+
+  font-size:.8rem;
+}
+
+.creator-footer strong{
+  color:#e8eef8;
+}
+
+.creator-footer a{
+  color:var(--cyan);
 }
 
 
@@ -908,7 +1077,8 @@ a{
 
   align-items:center;
 
-  border-top:1px solid var(--line);
+  border-top:
+  1px solid var(--line);
 
   padding-top:12px;
 }
@@ -963,9 +1133,12 @@ a{
 
   gap:7px;
 
-  border-top:1px solid var(--line);
+  border-top:
+  1px solid var(--line);
 
   padding-top:11px;
+
+  flex-wrap:wrap;
 }
 
 .post-actions button{
@@ -981,7 +1154,8 @@ a{
 }
 
 .post-actions button:hover{
-  background:rgba(255,255,255,.05);
+  background:
+  rgba(255,255,255,.05);
 
   color:#fff;
 }
@@ -1020,7 +1194,8 @@ a{
 
   background:#060a12;
 
-  border:1px solid var(--line);
+  border:
+  1px solid var(--line);
 
   line-height:1.9;
 
@@ -1036,9 +1211,11 @@ a{
 
   min-height:150px;
 
-  background:rgba(0,0,0,.3);
+  background:
+  rgba(0,0,0,.3);
 
-  border:1px solid var(--line);
+  border:
+  1px solid var(--line);
 
   border-radius:14px;
 
@@ -1068,7 +1245,8 @@ a{
 
   border-radius:12px;
 
-  border:1px solid var(--line);
+  border:
+  1px solid var(--line);
 
   text-align:center;
 }
@@ -1134,7 +1312,8 @@ a{
   background:
   rgba(255,255,255,.035);
 
-  border:1px solid var(--line);
+  border:
+  1px solid var(--line);
 }
 
 .rank:first-child{
@@ -1183,7 +1362,7 @@ a{
 }
 
 
-/* ================= DATA TABLE ================= */
+/* ================= DATA ================= */
 
 .data-table{
   width:100%;
@@ -1197,7 +1376,8 @@ a{
 .data-table td{
   padding:11px;
 
-  border-bottom:1px solid var(--line);
+  border-bottom:
+  1px solid var(--line);
 
   text-align:left;
 }
@@ -1211,13 +1391,14 @@ a{
 .table-wrap{
   overflow:auto;
 
-  border:1px solid var(--line);
+  border:
+  1px solid var(--line);
 
   border-radius:14px;
 }
 
 
-/* ================= CREATOR ================= */
+/* ================= CREATOR GRID ================= */
 
 .creator-grid{
   display:grid;
@@ -1260,7 +1441,7 @@ a{
 }
 
 
-/* ================= RIGHT PANEL ================= */
+/* ================= RIGHT SIDEBAR ================= */
 
 .right-card{
   padding:16px;
@@ -1277,7 +1458,8 @@ a{
 .trend{
   padding:10px 0;
 
-  border-bottom:1px solid var(--line);
+  border-bottom:
+  1px solid var(--line);
 }
 
 .trend:last-child{
@@ -1309,7 +1491,8 @@ a{
 
   z-index:2000;
 
-  transform:translateY(100px);
+  transform:
+  translateY(100px);
 
   opacity:0;
 
@@ -1319,7 +1502,8 @@ a{
 
   background:#111b2d;
 
-  border:1px solid
+  border:
+  1px solid
   rgba(0,229,255,.25);
 
   border-radius:13px;
@@ -1341,7 +1525,8 @@ a{
 
   inset:0;
 
-  background:rgba(0,0,0,.72);
+  background:
+  rgba(0,0,0,.72);
 
   backdrop-filter:blur(12px);
 
@@ -1359,7 +1544,7 @@ a{
 }
 
 .modal-box{
-  width:min(500px,100%);
+  width:min(520px,100%);
 
   padding:23px;
 
@@ -1377,164 +1562,244 @@ a{
 }
 
 
-/* ================= PRANTA CREATOR BRANDING ================= */
+/* ================= QUIZ ================= */
 
-.creator-intro{
-  margin-top:18px;
+.quiz-options{
+  display:grid;
 
+  gap:10px;
+
+  margin-top:15px;
+}
+
+.quiz-option{
+  text-align:left;
+
+  padding:13px 15px;
+
+  border:
+  1px solid var(--line);
+
+  border-radius:13px;
+
+  background:
+  rgba(255,255,255,.035);
+
+  color:#fff;
+
+  transition:.2s;
+}
+
+.quiz-option:hover{
+  border-color:
+  rgba(0,229,255,.35);
+
+  transform:
+  translateX(2px);
+}
+
+.quiz-option.correct{
+  border-color:
+  rgba(53,230,154,.5);
+
+  background:
+  rgba(53,230,154,.1);
+}
+
+.quiz-option.wrong{
+  border-color:
+  rgba(255,93,125,.5);
+
+  background:
+  rgba(255,93,125,.08);
+}
+
+.quiz-top{
+  display:flex;
+
+  justify-content:space-between;
+
+  gap:10px;
+
+  align-items:center;
+}
+
+.set-pills{
+  display:flex;
+
+  gap:7px;
+
+  flex-wrap:wrap;
+
+  margin:13px 0;
+}
+
+.pill{
+  border:
+  1px solid var(--line);
+
+  background:
+  rgba(255,255,255,.04);
+
+  color:var(--muted);
+
+  padding:7px 10px;
+
+  border-radius:999px;
+
+  font-size:.75rem;
+}
+
+.pill.active{
+  color:#fff;
+
+  background:
+  rgba(0,229,255,.1);
+
+  border-color:
+  rgba(0,229,255,.3);
+}
+
+
+/* ================= MEMORY ================= */
+
+.memory-grid{
+  display:grid;
+
+  grid-template-columns:
+  repeat(4,1fr);
+
+  gap:10px;
+
+  max-width:620px;
+
+  margin:18px auto;
+}
+
+.memory-card{
+  aspect-ratio:1;
+
+  border:
+  1px solid var(--line);
+
+  border-radius:15px;
+
+  background:
+  linear-gradient(
+    145deg,
+    #0e1728,
+    #080d17
+  );
+
+  color:transparent;
+
+  font-size:1.8rem;
+
+  display:grid;
+
+  place-items:center;
+
+  transition:.25s;
+
+  transform-style:preserve-3d;
+}
+
+.memory-card.flipped,
+.memory-card.matched{
+  background:
+  rgba(0,229,255,.09);
+
+  color:#fff;
+
+  border-color:
+  rgba(0,229,255,.35);
+
+  transform:
+  rotateY(180deg);
+}
+
+.memory-card.matched{
+  background:
+  rgba(53,230,154,.1);
+
+  border-color:
+  rgba(53,230,154,.35);
+}
+
+
+/* ================= FEEDBACK ================= */
+
+.feedback-item{
+  padding:15px;
+
+  border:
+  1px solid var(--line);
+
+  border-radius:15px;
+
+  background:
+  rgba(255,255,255,.03);
+
+  margin-bottom:10px;
+}
+
+.stars{
+  color:#ffd166;
+
+  letter-spacing:2px;
+}
+
+
+/* ================= REQUESTS ================= */
+
+.request{
   display:flex;
 
   align-items:center;
 
   justify-content:space-between;
 
-  gap:18px;
+  gap:12px;
 
-  padding:18px 20px;
+  padding:14px;
 
-  border:1px solid
-  rgba(0,229,255,.18);
+  border:
+  1px solid var(--line);
 
-  background:
-  linear-gradient(
-    135deg,
-    rgba(0,229,255,.07),
-    rgba(124,92,255,.07)
-  );
+  border-radius:14px;
 
-  border-radius:20px;
-
-  position:relative;
-
-  overflow:hidden;
-}
-
-.creator-intro:before{
-  content:"";
-
-  position:absolute;
-
-  width:140px;
-  height:140px;
-
-  border-radius:50%;
-
-  right:-50px;
-  top:-70px;
+  margin-bottom:9px;
 
   background:
-  rgba(0,229,255,.08);
-
-  filter:blur(2px);
+  rgba(255,255,255,.03);
 }
 
-.creator-copy{
-  position:relative;
-  z-index:1;
-}
-
-.creator-copy .mini-label{
-  font-size:.72rem;
-
-  text-transform:uppercase;
-
-  letter-spacing:.15em;
-
-  color:var(--cyan);
-
-  font-weight:800;
-}
-
-.creator-copy h3{
-  margin:4px 0 5px;
-
-  font-size:1.15rem;
-}
-
-.creator-copy p{
-  margin:0;
-
-  color:var(--muted);
-
-  line-height:1.6;
-
-  font-size:.9rem;
-
-  max-width:720px;
-}
-
-.creator-actions{
-  position:relative;
-
-  z-index:1;
-
+.request-info{
   display:flex;
 
-  gap:9px;
-
-  flex-wrap:wrap;
-}
-
-.linkedin-btn{
-  white-space:nowrap;
-
-  text-decoration:none;
-
-  display:inline-flex;
-
   align-items:center;
 
-  gap:8px;
+  gap:10px;
 }
 
-.fun-note{
-  display:inline-flex;
+.request-actions{
+  display:flex;
 
-  align-items:center;
+  gap:6px;
+}
 
-  gap:7px;
+.small-btn{
+  padding:8px 10px;
 
-  margin-top:14px;
+  border-radius:9px;
 
-  padding:8px 12px;
-
-  border:1px solid
-  rgba(255,255,255,.09);
-
-  border-radius:999px;
+  border:
+  1px solid var(--line);
 
   background:
-  rgba(255,255,255,.035);
+  rgba(255,255,255,.04);
 
-  font-size:.78rem;
-
-  color:#cbd5e1;
-}
-
-.creator-footer{
-  margin:26px 0 8px;
-
-  padding:18px 4px;
-
-  text-align:center;
-
-  color:var(--muted);
-
-  font-size:.8rem;
-}
-
-.creator-footer strong{
-  color:#e8eef8;
-}
-
-.creator-footer a{
-  color:var(--cyan);
-
-  text-decoration:none;
-}
-
-.creator-footer a:hover{
-  text-decoration:underline;
+  color:#fff;
 }
 
 
@@ -1579,6 +1844,7 @@ a{
     grid-template-columns:
     repeat(2,1fr);
   }
+
 }
 
 
@@ -1628,10 +1894,6 @@ a{
     display:none;
   }
 
-  .nav-icon{
-    font-size:1.05rem;
-  }
-
   .hero{
     padding:30px 21px;
 
@@ -1675,6 +1937,14 @@ a{
   .creator-actions .btn{
     flex:1;
   }
+
+  .memory-grid{
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:7px;
+  }
+
 }
 
 </style>
@@ -1825,6 +2095,32 @@ onclick="go('typing')"
 
 <a
 class="nav-item"
+data-view="quiz"
+onclick="go('quiz')"
+>
+
+<span class="nav-icon">❖</span>
+
+<span>Quiz Arcade</span>
+
+</a>
+
+
+<a
+class="nav-item"
+data-view="memory"
+onclick="go('memory')"
+>
+
+<span class="nav-icon">▣</span>
+
+<span>Memory Match</span>
+
+</a>
+
+
+<a
+class="nav-item"
 data-view="leaderboard"
 onclick="go('leaderboard')"
 >
@@ -1877,6 +2173,32 @@ onclick="go('connections')"
 
 <a
 class="nav-item"
+data-view="requests"
+onclick="go('requests')"
+>
+
+<span class="nav-icon">♧</span>
+
+<span>Friend Requests</span>
+
+</a>
+
+
+<a
+class="nav-item"
+data-view="feedback"
+onclick="go('feedback')"
+>
+
+<span class="nav-icon">★</span>
+
+<span>Feedback</span>
+
+</a>
+
+
+<a
+class="nav-item"
 data-view="profile"
 onclick="go('profile')"
 >
@@ -1886,6 +2208,7 @@ onclick="go('profile')"
 <span>My Profile</span>
 
 </a>
+
 
 </div>
 
@@ -2000,7 +2323,6 @@ Want to know more about the creator? Visit the LinkedIn profile.
 
 <div class="creator-actions">
 
-
 <a
 class="btn linkedin-btn"
 href="https://www.linkedin.com/in/prantasarkar?utm_source=share_via&utm_content=profile&utm_medium=member_android"
@@ -2024,7 +2346,7 @@ in&nbsp; View LinkedIn
 
 <div class="stat">
 
-<b id="memberCount">
+<b>
 12,480+
 </b>
 
@@ -2051,11 +2373,11 @@ Standard Typing Challenge
 <div class="stat">
 
 <b>
-24/7
+3 × 10
 </b>
 
 <span>
-Practice & Creation
+Quiz Challenge Sets
 </span>
 
 </div>
@@ -2064,11 +2386,11 @@ Practice & Creation
 <div class="stat">
 
 <b>
-100%
+24/7
 </b>
 
 <span>
-Focused on Useful Work
+Practice & Creation
 </span>
 
 </div>
@@ -2084,7 +2406,7 @@ What you can build here
 </h2>
 
 <span class="muted">
-Professional only
+Professional + Fun
 </span>
 
 </div>
@@ -2101,13 +2423,36 @@ Professional only
 </h3>
 
 <p>
-
 Take a standardized 2-minute typing challenge.
-
 Track WPM, accuracy, errors and personal bests.
+</p>
 
-Daily scores can be ranked on the leaderboard.
+</div>
 
+
+<div class="card feature">
+
+<h3>
+❖ Quiz Arcade
+</h3>
+
+<p>
+Three professional skill sets with ten questions each.
+Move question-by-question and track your score.
+</p>
+
+</div>
+
+
+<div class="card feature">
+
+<h3>
+▣ Memory Match
+</h3>
+
+<p>
+A useful brain-training card matching game with moves,
+timer and best score.
 </p>
 
 </div>
@@ -2120,43 +2465,8 @@ Daily scores can be ranked on the leaderboard.
 </h3>
 
 <p>
-
-Publish projects, useful tips, data insights and portfolio updates.
-
-Like, comment and connect without the noise of a general entertainment feed.
-
-</p>
-
-</div>
-
-
-<div class="card feature">
-
-<h3>
-▦ Data Studio
-</h3>
-
-<p>
-
-Create structured tables, collect records and export your work as CSV.
-
-This front-end demo keeps your workspace in your browser.
-
-</p>
-
-</div>
-
-
-<div class="card feature">
-
-<h3>
-✦ Creator Studio
-</h3>
-
-<p>
-
-Draft professional posts, project notes and portfolio content with a clean publishing workflow.
-
+Publish projects, useful tips and professional updates.
+Like, comment, share or reserve posts.
 </p>
 
 </div>
@@ -2412,7 +2722,6 @@ oninput="typingInputChanged()"
 
 <div class="typing-metrics">
 
-
 <div class="metric">
 
 <b id="wpm">
@@ -2495,6 +2804,239 @@ View Daily Ranking
 
 
 
+<!-- ================= QUIZ ================= -->
+
+<section
+id="quiz"
+class="view"
+>
+
+<div class="page-head">
+
+<h1>
+10-Question Quiz Arcade
+</h1>
+
+<p>
+Three sets • ten questions each • next/previous navigation • score tracking.
+</p>
+
+</div>
+
+
+<div class="panel card">
+
+
+<div class="set-pills">
+
+<button
+class="pill active"
+id="setBtn1"
+onclick="selectQuizSet(0)"
+>
+Set 1 • Digital Skills
+</button>
+
+
+<button
+class="pill"
+id="setBtn2"
+onclick="selectQuizSet(1)"
+>
+Set 2 • Data & Web
+</button>
+
+
+<button
+class="pill"
+id="setBtn3"
+onclick="selectQuizSet(2)"
+>
+Set 3 • Professional
+</button>
+
+</div>
+
+
+<div class="quiz-top">
+
+<span
+class="muted"
+id="quizProgress"
+>
+Question 1 of 10
+</span>
+
+
+<b id="quizScore">
+Score: 0
+</b>
+
+</div>
+
+
+<h2
+id="quizQuestion"
+style="margin-top:18px"
+>
+Loading...
+</h2>
+
+
+<div
+class="quiz-options"
+id="quizOptions"
+>
+</div>
+
+
+<div
+class="actions"
+style="margin-top:18px"
+>
+
+<button
+class="btn"
+onclick="quizPrev()"
+>
+← Previous
+</button>
+
+
+<button
+class="btn primary"
+onclick="quizNext()"
+>
+Next →
+</button>
+
+
+<button
+class="btn success"
+onclick="finishQuiz()"
+>
+Finish Set
+</button>
+
+</div>
+
+
+<div
+id="quizResult"
+style="margin-top:15px"
+>
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= MEMORY ================= -->
+
+<section
+id="memory"
+class="view"
+>
+
+<div class="page-head">
+
+<h1>
+Memory Match
+</h1>
+
+<p>
+Match every pair. Fewer moves and faster time means a better score.
+</p>
+
+</div>
+
+
+<div class="panel card">
+
+
+<div class="stats" style="margin-top:0">
+
+
+<div class="stat">
+
+<b id="memoryMoves">
+0
+</b>
+
+<span>
+Moves
+</span>
+
+</div>
+
+
+<div class="stat">
+
+<b id="memoryTime">
+00:00
+</b>
+
+<span>
+Time
+</span>
+
+</div>
+
+
+<div class="stat">
+
+<b id="memoryPairs">
+0/8
+</b>
+
+<span>
+Pairs
+</span>
+
+</div>
+
+
+<div class="stat">
+
+<b id="memoryBest">
+—
+</b>
+
+<span>
+Best Score
+</span>
+
+</div>
+
+</div>
+
+
+<div
+class="memory-grid"
+id="memoryGrid"
+>
+</div>
+
+
+<div class="actions">
+
+<button
+class="btn primary"
+onclick="startMemory()"
+>
+New Match Game
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+
 <!-- ================= LEADERBOARD ================= -->
 
 <section
@@ -2530,7 +3072,7 @@ Today • Global
 </h2>
 
 <span class="tag">
-LIVE LOCAL DEMO
+LOCAL DEMO
 </span>
 
 </div>
@@ -2538,8 +3080,7 @@ LIVE LOCAL DEMO
 
 <p style="margin-top:10px">
 
-In this single-file prototype, your score is stored locally.
-
+Your local score can appear here instantly.
 A real global ranking requires a secure server/database.
 
 </p>
@@ -2552,7 +3093,8 @@ A real global ranking requires a secure server/database.
 <div
 id="rankList"
 class="rank-list"
-></div>
+>
+</div>
 
 </div>
 
@@ -2737,7 +3279,8 @@ Action
 </thead>
 
 
-<tbody id="dataRows"></tbody>
+<tbody id="dataRows">
+</tbody>
 
 </table>
 
@@ -2828,7 +3371,6 @@ Publish to Feed
 </div>
 
 
-
 <div class="section-title">
 
 <h2>
@@ -2887,7 +3429,7 @@ Give credit where appropriate and avoid copying other people's work.
 </h3>
 
 <p>
-Never publish passwords, private contact data, API keys or confidential client information.
+Never publish passwords, private contact data, API keys or confidential information.
 </p>
 
 </div>
@@ -2921,7 +3463,161 @@ Discover people by skill and build a focused professional network.
 <div
 class="creator-grid"
 id="creatorGrid"
-></div>
+>
+</div>
+
+</section>
+
+
+
+<!-- ================= FRIEND REQUESTS ================= -->
+
+<section
+id="requests"
+class="view"
+>
+
+<div class="page-head">
+
+<h1>
+Friend Requests
+</h1>
+
+<p>
+Accept, decline and manage connection requests just like a real social-professional profile.
+</p>
+
+</div>
+
+
+<div class="panel card">
+
+<div id="requestList">
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= FEEDBACK ================= -->
+
+<section
+id="feedback"
+class="view"
+>
+
+<div class="page-head">
+
+<h1>
+Share Feedback
+</h1>
+
+<p>
+Send feedback and view community feedback in one place.
+</p>
+
+</div>
+
+
+<div class="panel card">
+
+
+<div class="form">
+
+
+<div class="field">
+
+<label>
+Your Name
+</label>
+
+<input
+id="fbName"
+placeholder="Your name"
+>
+
+</div>
+
+
+<div class="field">
+
+<label>
+Rating
+</label>
+
+<select id="fbRating">
+
+<option value="5">
+★★★★★ — Excellent
+</option>
+
+<option value="4">
+★★★★☆ — Very Good
+</option>
+
+<option value="3">
+★★★☆☆ — Good
+</option>
+
+<option value="2">
+★★☆☆☆ — Needs Improvement
+</option>
+
+<option value="1">
+★☆☆☆☆ — Poor
+</option>
+
+</select>
+
+</div>
+
+
+<div class="field">
+
+<label>
+Feedback
+</label>
+
+<textarea
+id="fbText"
+placeholder="Tell us what you like or what could be improved..."
+></textarea>
+
+</div>
+
+
+<button
+class="btn primary"
+onclick="submitFeedback()"
+>
+Share Feedback
+</button>
+
+</div>
+
+</div>
+
+
+<div class="section-title">
+
+<h2>
+Community Feedback
+</h2>
+
+<span
+class="muted"
+id="feedbackCount"
+>
+0 reviews
+</span>
+
+</div>
+
+
+<div id="feedbackList">
+</div>
 
 </section>
 
@@ -2941,7 +3637,7 @@ My Profile
 </h1>
 
 <p>
-Your professional identity and performance.
+Your professional identity, account and performance.
 </p>
 
 </div>
@@ -2954,7 +3650,7 @@ Your professional identity and performance.
 style="
 display:flex;
 gap:15px;
-align-items:center;
+align-items:center
 "
 >
 
@@ -2992,7 +3688,6 @@ Create an account to build your professional identity.
 </div>
 
 </div>
-
 
 
 <div
@@ -3042,12 +3737,12 @@ Connections
 
 <div class="stat">
 
-<b>
-Pro
+<b id="profileStatus">
+Guest
 </b>
 
 <span>
-Member Status
+Account Status
 </span>
 
 </div>
@@ -3055,13 +3750,27 @@ Member Status
 </div>
 
 
+<div
+class="actions"
+style="margin-top:16px"
+>
+
 <button
 class="btn primary"
-style="margin-top:16px"
 onclick="openAuth()"
 >
-Create / Login Account
+Login / Account
 </button>
+
+
+<button
+class="btn danger"
+onclick="logout()"
+>
+Log Out
+</button>
+
+</div>
 
 </div>
 
@@ -3095,7 +3804,7 @@ Stay updated with your professional activity.
 
 Welcome to ProNexa.
 
-Competition results, connection requests and useful platform events would appear here in the full backend version.
+Competition results, connection requests and useful platform events appear here in the full version.
 
 </div>
 
@@ -3104,34 +3813,6 @@ Competition results, connection requests and useful platform events would appear
 </section>
 
 </main>
-
-
-
-<!-- ================= CREATOR FOOTER ================= -->
-
-<div class="creator-footer">
-
-Created with curiosity, code and a little fun by
-
-<strong>
-Pranta Sarkar
-</strong>
-
-•
-
-<a
-href="https://www.linkedin.com/in/prantasarkar?utm_source=share_via&utm_content=profile&utm_medium=member_android"
-target="_blank"
-rel="noopener noreferrer"
->
-LinkedIn
-</a>
-
-•
-
-ProNexa
-
-</div>
 
 
 
@@ -3208,7 +3889,8 @@ Trending Skills
 Top Today
 </h3>
 
-<div id="miniRanks"></div>
+<div id="miniRanks">
+</div>
 
 </div>
 
@@ -3228,15 +3910,40 @@ line-height:1.7
 "
 >
 
-Focused on professional work, learning, creation and meaningful connections.
-
-No random entertainment feed.
+Focused on professional work, learning, creation and meaningful connections — with a little healthy fun.
 
 </p>
 
 </div>
 
 </aside>
+
+</div>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<div class="creator-footer">
+
+Created with curiosity, code and a little fun by
+
+<strong>
+Pranta Sarkar
+</strong>
+
+•
+
+<a
+href="https://www.linkedin.com/in/prantasarkar?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+target="_blank"
+>
+LinkedIn
+</a>
+
+•
+
+ProNexa
 
 </div>
 
@@ -3301,13 +4008,15 @@ Create Account
 <div
 id="authForm"
 class="form"
-></div>
+>
+</div>
 
 
 <div
 id="authMsg"
 style="margin-top:12px"
-></div>
+>
+</div>
 
 </div>
 
@@ -3318,16 +4027,17 @@ style="margin-top:12px"
 <div
 class="toast"
 id="toast"
-></div>
+>
+</div>
 
 
 
 <script>
 
+
 /* =========================================================
-   PRONEXA
+   PRONEXA NEXT
    Created by Pranta Sarkar
-   Single-file Professional Network Demo
 ========================================================= */
 
 
@@ -3380,7 +4090,7 @@ const seedUsers=[
 ];
 
 
-/* ================= LOCAL DATA ================= */
+/* ================= POSTS ================= */
 
 let posts=
 JSON.parse(
@@ -3391,30 +4101,46 @@ localStorage.getItem("pn_posts") || "null"
 
 {
  id:1,
+
  name:"Aarav Mehta",
+
  role:"Data Analyst",
+
  initial:"AM",
+
  time:"Today",
 
  text:
 "Finished a clean data-validation workflow for a client dataset. The biggest improvement came from standardizing fields before analysis.",
 
  likes:18,
- liked:false
+
+ liked:false,
+
+ saved:false
+
 },
 
 {
  id:2,
+
  name:"Maya Sen",
+
  role:"Web Developer",
+
  initial:"MS",
+
  time:"Today",
 
  text:
 "Built a lightweight dashboard with accessible components and responsive layouts. Small details make professional interfaces feel much better.",
 
  likes:27,
- liked:false
+
+ liked:false,
+
+ saved:false
+
 }
 
 ];
@@ -3438,20 +4164,313 @@ localStorage.getItem("pn_current") || "null"
 );
 
 
+let requests=
+JSON.parse(
+localStorage.getItem("pn_requests") || "null"
+)
+||
+[
+
+{
+ name:"Maya Sen",
+ role:"Web Developer",
+ initial:"MS",
+ status:"pending"
+},
+
+{
+ name:"Rahul Sharma",
+ role:"Data Entry Specialist",
+ initial:"RS",
+ status:"pending"
+}
+
+];
+
+
+let feedback=
+JSON.parse(
+localStorage.getItem("pn_feedback") || "null"
+)
+||
+[
+
+{
+ name:"Aarav",
+ rating:5,
+ text:
+"The 2-minute typing arena is simple, competitive and genuinely useful."
+},
+
+{
+ name:"Maya",
+ rating:5,
+ text:
+"The professional feed and creator area have a clean modern feel."
+}
+
+];
+
+
 let mode="login";
 
 
+/* ================= TYPING ================= */
+
 let typing={
+
  running:false,
+
  time:120,
+
  interval:null,
- start:0,
+
  best:Number(
    localStorage.getItem("pn_best") || 0
  ),
+
  finished:false
+
 };
 
+
+/* ================= QUIZ ================= */
+
+let quizSet=0;
+
+let quizIndex=0;
+
+let quizAnswers=[];
+
+let quizScore=0;
+
+
+/* ================= MEMORY ================= */
+
+let memory={
+
+ cards:[],
+
+ first:null,
+
+ second:null,
+
+ lock:false,
+
+ moves:0,
+
+ pairs:0,
+
+ start:null,
+
+ interval:null,
+
+ best:Number(
+   localStorage.getItem(
+     "pn_memory_best"
+   ) || 0
+ )
+
+};
+
+
+/* ================= QUIZ DATA ================= */
+
+const quizSets=[
+
+
+[
+{
+ q:"Which tool is commonly used for spreadsheet data organization?",
+ o:["Excel","Photoshop","Audacity","Blender"],
+ a:0
+},
+
+{
+ q:"What does CSV commonly mean?",
+ o:["Comma-Separated Values","Computer System Video","Cloud Storage Version","Code Style Variable"],
+ a:0
+},
+
+{
+ q:"Which skill is most important for accurate data entry?",
+ o:["Consistency","Randomness","Guessing","Speed only"],
+ a:0
+},
+
+{
+ q:"HTML is primarily used to structure what?",
+ o:["Web pages","Databases only","Images only","Operating systems"],
+ a:0
+},
+
+{
+ q:"Which is a programming language?",
+ o:["JavaScript","JPEG","HTTP","HTML tag"],
+ a:0
+},
+
+{
+ q:"What does UI stand for?",
+ o:["User Interface","Universal Internet","User Index","Upload Input"],
+ a:0
+},
+
+{
+ q:"A professional portfolio mainly shows what?",
+ o:["Your work and skills","Your private password","Random memes","Bank PIN"],
+ a:0
+},
+
+{
+ q:"What is a strong password practice?",
+ o:["Use a unique password","Share it publicly","Use 123456","Use your name only"],
+ a:0
+},
+
+{
+ q:"What is data validation for?",
+ o:["Checking data quality","Deleting every record","Changing passwords","Designing logos"],
+ a:0
+},
+
+{
+ q:"What does responsive web design mean?",
+ o:["It adapts to different screens","It only works on desktop","It needs no CSS","It blocks mobile users"],
+ a:0
+}
+
+],
+
+
+[
+{
+ q:"Which JavaScript method converts JSON text into an object?",
+ o:["JSON.parse()","JSON.make()","JSON.read()","JSON.object()"],
+ a:0
+},
+
+{
+ q:"What is a database used for?",
+ o:["Storing structured information","Only drawing pictures","Playing music","Editing videos"],
+ a:0
+},
+
+{
+ q:"What does API commonly allow?",
+ o:["Software systems to communicate","Only image compression","Only typing tests","Only printing"],
+ a:0
+},
+
+{
+ q:"Which is a front-end technology?",
+ o:["CSS","SQL Server only","FTP only","SMTP only"],
+ a:0
+},
+
+{
+ q:"What does UX focus on?",
+ o:["User experience","File extension","Server temperature","Keyboard brand"],
+ a:0
+},
+
+{
+ q:"Why use backups?",
+ o:["To recover information","To slow a website","To remove security","To duplicate passwords publicly"],
+ a:0
+},
+
+{
+ q:"Which format is commonly used for tabular export?",
+ o:["CSV","MP3","PNG","MP4"],
+ a:0
+},
+
+{
+ q:"What does HTTPS add to web communication?",
+ o:["Encryption/security","A larger screen","A spreadsheet","A font"],
+ a:0
+},
+
+{
+ q:"What is debugging?",
+ o:["Finding and fixing software issues","Designing a logo","Writing a resume only","Deleting a website"],
+ a:0
+},
+
+{
+ q:"Which is useful for a professional dashboard?",
+ o:["Clear metrics","Random animations only","Hidden navigation","Unreadable text"],
+ a:0
+}
+
+],
+
+
+[
+{
+ q:"What makes professional networking valuable?",
+ o:["Meaningful connections around work","Collecting random followers only","Sharing passwords","Ignoring people"],
+ a:0
+},
+
+{
+ q:"What is constructive feedback?",
+ o:["Specific and useful improvement advice","Personal attack","Spam","A password request"],
+ a:0
+},
+
+{
+ q:"Which is a good professional post?",
+ o:["A project with useful context","Private credentials","Misleading claims","Spam links"],
+ a:0
+},
+
+{
+ q:"Why cite a source?",
+ o:["To give credit and context","To hide the source","To confuse readers","To remove evidence"],
+ a:0
+},
+
+{
+ q:"What is a KPI?",
+ o:["Key Performance Indicator","Keyboard Personal Input","Known Password Index","Key Program Image"],
+ a:0
+},
+
+{
+ q:"Which behavior builds trust?",
+ o:["Reliable and honest communication","False promises","Impersonation","Ignoring messages"],
+ a:0
+},
+
+{
+ q:"What is a portfolio project strongest when it includes?",
+ o:["Problem, process and result","Only a title","No explanation","Copied text"],
+ a:0
+},
+
+{
+ q:"What should you avoid publishing?",
+ o:["Sensitive private information","Your public project summary","General skills","Learning updates"],
+ a:0
+},
+
+{
+ q:"What does collaboration require?",
+ o:["Communication and shared responsibility","Silence only","Competition only","Password sharing"],
+ a:0
+},
+
+{
+ q:"What is a good growth mindset?",
+ o:["Learn from mistakes and improve","Never try again","Avoid feedback","Assume you know everything"],
+ a:0
+}
+
+]
+
+];
 
 
 /* ================= NAVIGATION ================= */
@@ -3470,7 +4489,9 @@ function go(id){
 
 
  if(target){
+
    target.classList.add("active");
+
  }
 
 
@@ -3497,8 +4518,23 @@ function go(id){
  if(id==="connections")
    renderConnections();
 
+ if(id==="requests")
+   renderRequests();
+
+ if(id==="feedback")
+   renderFeedback();
+
  if(id==="profile")
    renderProfile();
+
+ if(id==="quiz")
+   renderQuiz();
+
+ if(
+   id==="memory" &&
+   !memory.cards.length
+ )
+   startMemory();
 
 
  window.scrollTo({
@@ -3507,7 +4543,6 @@ function go(id){
  });
 
 }
-
 
 
 /* ================= TOAST ================= */
@@ -3529,8 +4564,7 @@ function toast(msg){
 }
 
 
-
-/* ================= ACCOUNT ================= */
+/* ================= AUTH ================= */
 
 function openAuth(m="login"){
 
@@ -3577,13 +4611,15 @@ function authMode(m){
 
 function renderAuth(){
 
- const form=
- document.getElementById("authForm");
+ const f=
+ document.getElementById(
+   "authForm"
+ );
 
 
  if(mode==="login"){
 
-   form.innerHTML=`
+   f.innerHTML=`
 
    <div class="field">
 
@@ -3628,9 +4664,8 @@ function renderAuth(){
    style="font-size:.75rem"
    >
 
-   Demo note:
+   Demo version:
    credentials are stored only in this browser.
-
    Do not use a real password here.
 
    </div>
@@ -3641,7 +4676,7 @@ function renderAuth(){
 
  else{
 
-   form.innerHTML=`
+   f.innerHTML=`
 
    <div class="field">
 
@@ -3715,7 +4750,7 @@ function renderAuth(){
    style="font-size:.75rem"
    >
 
-   For a real production service, passwords must be hashed on a server and never stored in localStorage.
+   Production systems should use server-side password hashing and authentication.
 
    </div>
 
@@ -3806,15 +4841,20 @@ function signup(){
  const u={
 
    id:
-   crypto.randomUUID(),
+   Date.now().toString(),
 
    name,
+
    email,
+
    role,
+
    password,
 
    best:0,
+
    posts:0,
+
    connections:0
 
  };
@@ -3915,6 +4955,24 @@ function login(){
 }
 
 
+function logout(){
+
+ currentUser=null;
+
+ localStorage.removeItem(
+   "pn_current"
+ );
+
+ updateIdentity();
+
+ toast(
+   "You are logged out."
+ );
+
+ go("home");
+
+}
+
 
 /* ================= IDENTITY ================= */
 
@@ -3935,7 +4993,8 @@ function updateIdentity(){
  .slice(0,2)
  .join("")
  .toUpperCase()
- :"G";
+ :
+ "G";
 
 
  document.getElementById(
@@ -3976,7 +5035,6 @@ function updateIdentity(){
 }
 
 
-
 /* ================= FEED ================= */
 
 document
@@ -3995,9 +5053,8 @@ function createPost(){
 
  if(!currentUser){
 
-   openAuth("login");
+   return openAuth("login");
 
-   return;
  }
 
 
@@ -4026,12 +5083,7 @@ function createPost(){
    role:currentUser.role,
 
    initial:
-   currentUser.name
-   .split(" ")
-   .map(x=>x[0])
-   .slice(0,2)
-   .join("")
-   .toUpperCase(),
+   initials(currentUser.name),
 
    time:"Just now",
 
@@ -4039,7 +5091,9 @@ function createPost(){
 
    likes:0,
 
-   liked:false
+   liked:false,
+
+   saved:false
 
  });
 
@@ -4049,7 +5103,6 @@ function createPost(){
 
 
  syncCurrent();
-
 
  savePosts();
 
@@ -4152,16 +5205,25 @@ function renderFeed(
 
 
    <button
-   onclick="toast('Comment system is ready for the backend version.')"
+   onclick="toast('Comment area is ready for the full backend version.')"
    >
    ◌ Comment
    </button>
 
 
    <button
-   onclick="toast('Post saved locally.')"
+   onclick="sharePost(${p.id})"
    >
-   ▱ Save
+   ↗ Share
+   </button>
+
+
+   <button
+   class="${p.saved?"liked":""}"
+   onclick="reservePost(${p.id})"
+   >
+   🔖
+   ${p.saved?"Reserved":"Reserve"}
    </button>
 
    </div>
@@ -4204,6 +5266,102 @@ function likePost(id){
 
 
  renderFeed();
+
+}
+
+
+function reservePost(id){
+
+ const p=
+ posts.find(
+   x=>x.id===id
+ );
+
+
+ if(!p)
+   return;
+
+
+ p.saved=
+ !p.saved;
+
+
+ savePosts();
+
+
+ toast(
+   p.saved
+   ?
+   "Post reserved to your saved area."
+   :
+   "Post removed from reserved items."
+ );
+
+
+ renderFeed();
+
+}
+
+
+async function sharePost(id){
+
+ const p=
+ posts.find(
+   x=>x.id===id
+ );
+
+
+ if(!p)
+   return;
+
+
+ const text=
+ "ProNexa post by "+
+ p.name+
+ ": "+
+ p.text;
+
+
+ if(
+   navigator.share
+ ){
+
+   try{
+
+     await navigator.share({
+
+       title:"ProNexa",
+
+       text
+
+     });
+
+   }
+   catch(e){}
+
+ }
+ else{
+
+   try{
+
+     await navigator.clipboard.writeText(
+       text
+     );
+
+     toast(
+       "Post text copied to clipboard."
+     );
+
+   }
+   catch(e){
+
+     toast(
+       "Share is ready for supported devices."
+     );
+
+   }
+
+ }
 
 }
 
@@ -4268,8 +5426,7 @@ function searchEverything(q){
 }
 
 
-
-/* ================= TYPING COMPETITION ================= */
+/* ================= TYPING ================= */
 
 const promptText=
 document
@@ -4291,10 +5448,8 @@ function startTyping(){
 
  typing.time=120;
 
- typing.start=Date.now();
 
-
- const input=
+ let input=
  document.getElementById(
    "typingInput"
  );
@@ -4386,7 +5541,8 @@ function typingInputChanged(){
  input.trim()
  ?
  input.trim().split(/\s+/).length
- :0;
+ :
+ 0;
 
 
  const wpm=
@@ -4408,12 +5564,14 @@ function typingInputChanged(){
      )*100
    )
  )
- :100;
+ :
+ 100;
 
 
  document.getElementById(
    "wpm"
- ).textContent=wpm;
+ ).textContent=
+ wpm;
 
 
  document.getElementById(
@@ -4547,7 +5705,8 @@ function finishTyping(){
  input.trim()
  ?
  input.trim().split(/\s+/).length
- :0;
+ :
+ 0;
 
 
  const wpm=
@@ -4569,7 +5728,8 @@ function finishTyping(){
      )*100
    )
  )
- :0;
+ :
+ 0;
 
 
  const score=
@@ -4612,7 +5772,8 @@ function finishTyping(){
 
  document.getElementById(
    "wpm"
- ).textContent=wpm;
+ ).textContent=
+ wpm;
 
 
  document.getElementById(
@@ -4638,7 +5799,6 @@ function finishTyping(){
 }
 
 
-
 /* ================= LEADERBOARD ================= */
 
 function renderLeaderboard(){
@@ -4660,12 +5820,7 @@ function renderLeaderboard(){
      role:currentUser.role,
 
      initial:
-     currentUser.name
-     .split(" ")
-     .map(x=>x[0])
-     .slice(0,2)
-     .join("")
-     .toUpperCase(),
+     initials(currentUser.name),
 
      wpm:currentUser.best
 
@@ -4680,13 +5835,10 @@ function renderLeaderboard(){
  );
 
 
- const box=
  document.getElementById(
    "rankList"
- );
+ ).innerHTML=
 
-
- box.innerHTML=
  list.map(
 
    (u,i)=>`
@@ -4734,7 +5886,8 @@ function renderLeaderboard(){
 
    `
 
- ).join("");
+ )
+ .join("");
 
 
  document.getElementById(
@@ -4766,7 +5919,6 @@ function renderLeaderboard(){
  .join("");
 
 }
-
 
 
 /* ================= DATA STUDIO ================= */
@@ -4969,7 +6121,10 @@ function downloadCSV(){
    r=>
    r.map(
      v=>
-     `"${String(v).replaceAll('"','""')}"`
+     '"'+
+     String(v)
+     .replaceAll('"','""')+
+     '"'
    )
    .join(",")
  )
@@ -4979,7 +6134,9 @@ function downloadCSV(){
  const blob=
  new Blob(
    [csv],
-   {type:"text/csv"}
+   {
+     type:"text/csv"
+   }
  );
 
 
@@ -5005,8 +6162,7 @@ function downloadCSV(){
 }
 
 
-
-/* ================= CREATOR ================= */
+/* ================= CREATOR STUDIO ================= */
 
 function publishProject(){
 
@@ -5038,20 +6194,16 @@ function publishProject(){
  .trim();
 
 
- if(!title || !desc){
+ if(
+   !title ||
+   !desc
+ ){
 
    return toast(
      "Add a title and description."
    );
 
  }
-
-
- const text=
- `${title}
-
-${desc}
-${skills ? "\nSkills: "+skills : ""}`;
 
 
  posts.unshift({
@@ -5063,20 +6215,22 @@ ${skills ? "\nSkills: "+skills : ""}`;
    role:currentUser.role,
 
    initial:
-   currentUser.name
-   .split(" ")
-   .map(x=>x[0])
-   .slice(0,2)
-   .join("")
-   .toUpperCase(),
+   initials(currentUser.name),
 
    time:"Just now",
 
-   text,
+   text:
+   `${title}
+
+${desc}
+
+${skills ? "Skills: "+skills : ""}`,
 
    likes:0,
 
-   liked:false
+   liked:false,
+
+   saved:false
 
  });
 
@@ -5086,7 +6240,6 @@ ${skills ? "\nSkills: "+skills : ""}`;
 
 
  syncCurrent();
-
 
  savePosts();
 
@@ -5110,7 +6263,6 @@ ${skills ? "\nSkills: "+skills : ""}`;
  go("feed");
 
 }
-
 
 
 /* ================= CONNECTIONS ================= */
@@ -5165,9 +6317,9 @@ function renderConnections(){
    <button
    class="btn"
    style="margin-top:12px"
-   onclick="connectUser('${u.name}')"
+   onclick="sendRequest('${u.name}')"
    >
-   Connect
+   ♧ Send Friend Request
    </button>
 
    </div>
@@ -5180,7 +6332,7 @@ function renderConnections(){
 }
 
 
-function connectUser(name){
+function sendRequest(name){
 
  if(!currentUser){
 
@@ -5189,15 +6341,56 @@ function connectUser(name){
  }
 
 
- currentUser.connections=
- (currentUser.connections||0)+1;
+ if(
+   requests.some(
+     r=>
+     r.name===name &&
+     r.fromMe
+   )
+ ){
+
+   return toast(
+     "Request already sent."
+   );
+
+ }
 
 
- syncCurrent();
+ const base=
+ seedUsers.find(
+   u=>u.name===name
+ );
+
+
+ requests.push({
+
+   name,
+
+   role:
+   base
+   ?base.role
+   :"Professional",
+
+   initial:
+   base
+   ?base.initial
+   :"PR",
+
+   status:"sent",
+
+   fromMe:true
+
+ });
+
+
+ localStorage.setItem(
+   "pn_requests",
+   JSON.stringify(requests)
+ );
 
 
  toast(
-   "Connection request sent to "+
+   "Friend request sent to "+
    name+
    "."
  );
@@ -5205,20 +6398,908 @@ function connectUser(name){
 }
 
 
+/* ================= FRIEND REQUESTS ================= */
+
+function renderRequests(){
+
+ let box=
+ document.getElementById(
+   "requestList"
+ );
+
+
+ let incoming=
+ requests.filter(
+   r=>
+   !r.fromMe &&
+   r.status==="pending"
+ );
+
+
+ let sent=
+ requests.filter(
+   r=>
+   r.fromMe &&
+   r.status==="sent"
+ );
+
+
+ let html=
+ incoming.length
+
+ ?
+
+ incoming
+ .map(
+
+   (r,i)=>`
+
+   <div class="request">
+
+   <div class="request-info">
+
+   <div class="rank-avatar">
+   ${r.initial}
+   </div>
+
+
+   <div>
+
+   <b>
+   ${escapeHTML(r.name)}
+   </b>
+
+   <div class="muted">
+   ${escapeHTML(r.role)}
+   • wants to connect
+   </div>
+
+   </div>
+
+   </div>
+
+
+   <div class="request-actions">
+
+   <button
+   class="small-btn"
+   onclick="acceptRequest(${requests.indexOf(r)})"
+   >
+   Accept
+   </button>
+
+
+   <button
+   class="small-btn"
+   onclick="declineRequest(${requests.indexOf(r)})"
+   >
+   Decline
+   </button>
+
+   </div>
+
+   </div>
+
+   `
+
+ )
+ .join("")
+
+ :
+
+ '<div class="empty">No new incoming requests.</div>';
+
+
+ if(sent.length){
+
+   html+=
+   '<div class="section-title"><h2>Sent Requests</h2></div>';
+
+
+   html+=
+
+   sent
+   .map(
+
+     r=>`
+
+     <div class="request">
+
+     <div class="request-info">
+
+     <div class="rank-avatar">
+     ${r.initial}
+     </div>
+
+
+     <div>
+
+     <b>
+     ${escapeHTML(r.name)}
+     </b>
+
+     <div class="muted">
+     ${escapeHTML(r.role)}
+     </div>
+
+     </div>
+
+     </div>
+
+
+     <span class="tag">
+     Request Sent
+     </span>
+
+     </div>
+
+     `
+
+   )
+   .join("");
+
+ }
+
+
+ box.innerHTML=html;
+
+}
+
+
+function acceptRequest(i){
+
+ requests[i].status=
+ "accepted";
+
+
+ if(currentUser){
+
+   currentUser.connections=
+   (currentUser.connections||0)+1;
+
+   syncCurrent();
+
+ }
+
+
+ localStorage.setItem(
+   "pn_requests",
+   JSON.stringify(requests)
+ );
+
+
+ renderRequests();
+
+
+ toast(
+   "Connection accepted."
+ );
+
+}
+
+
+function declineRequest(i){
+
+ requests[i].status=
+ "declined";
+
+
+ localStorage.setItem(
+   "pn_requests",
+   JSON.stringify(requests)
+ );
+
+
+ renderRequests();
+
+
+ toast(
+   "Request declined."
+ );
+
+}
+
+
+/* ================= FEEDBACK ================= */
+
+function submitFeedback(){
+
+ let name=
+ document
+ .getElementById("fbName")
+ .value
+ .trim()
+ ||
+ "Anonymous Member";
+
+
+ let rating=
+ Number(
+   document.getElementById(
+     "fbRating"
+   ).value
+ );
+
+
+ let text=
+ document
+ .getElementById("fbText")
+ .value
+ .trim();
+
+
+ if(!text){
+
+   return toast(
+     "Please write your feedback first."
+   );
+
+ }
+
+
+ feedback.unshift({
+
+   name,
+
+   rating,
+
+   text
+
+ });
+
+
+ localStorage.setItem(
+   "pn_feedback",
+   JSON.stringify(feedback)
+ );
+
+
+ document.getElementById(
+   "fbName"
+ ).value="";
+
+
+ document.getElementById(
+   "fbText"
+ ).value="";
+
+
+ renderFeedback();
+
+
+ toast(
+   "Thank you for your feedback!"
+ );
+
+}
+
+
+function renderFeedback(){
+
+ document.getElementById(
+   "feedbackCount"
+ ).textContent=
+ feedback.length+
+ " reviews";
+
+
+ document.getElementById(
+   "feedbackList"
+ ).innerHTML=
+
+ feedback
+ .map(
+
+   f=>`
+
+   <div class="feedback-item">
+
+   <div class="stars">
+
+   ${"★".repeat(f.rating)}
+   ${"☆".repeat(5-f.rating)}
+
+   </div>
+
+
+   <b>
+   ${escapeHTML(f.name)}
+   </b>
+
+
+   <p
+   class="muted"
+   style="
+   margin-top:6px;
+   line-height:1.7
+   "
+   >
+   ${escapeHTML(f.text)}
+   </p>
+
+   </div>
+
+   `
+
+ )
+ .join("");
+
+}
+
+
+/* ================= QUIZ ================= */
+
+function selectQuizSet(i){
+
+ quizSet=i;
+
+ quizIndex=0;
+
+ quizAnswers=[];
+
+ quizScore=0;
+
+
+ document
+ .querySelectorAll(".pill")
+ .forEach(
+   (x,n)=>
+   x.classList.toggle(
+     "active",
+     n===i
+   )
+ );
+
+
+ renderQuiz();
+
+}
+
+
+function renderQuiz(){
+
+ const q=
+ quizSets
+ [quizSet]
+ [quizIndex];
+
+
+ document.getElementById(
+   "quizProgress"
+ ).textContent=
+ "Question "+
+ (quizIndex+1)+
+ " of 10";
+
+
+ document.getElementById(
+   "quizScore"
+ ).textContent=
+ "Score: "+
+ quizScore;
+
+
+ document.getElementById(
+   "quizQuestion"
+ ).textContent=
+ q.q;
+
+
+ document.getElementById(
+   "quizOptions"
+ ).innerHTML=
+
+ q.o
+ .map(
+
+   (x,i)=>`
+
+   <button
+   class="
+   quiz-option
+   ${
+     quizAnswers[quizIndex]===i
+     ?
+     (
+       i===q.a
+       ?
+       "correct"
+       :
+       "wrong"
+     )
+     :
+     ""
+   }
+   "
+   onclick="answerQuiz(${i})"
+   >
+
+   ${String.fromCharCode(65+i)}.
+   ${x}
+
+   </button>
+
+   `
+
+ )
+ .join("");
+
+
+ document.getElementById(
+   "quizResult"
+ ).innerHTML=
+
+ quizIndex===9
+
+ ?
+
+ '<div class="notice">Last question of this set. Press Finish Set for your result.</div>'
+
+ :
+
+ "";
+
+}
+
+
+function answerQuiz(i){
+
+ if(
+   quizAnswers[quizIndex]!==undefined
+ )
+   return;
+
+
+ quizAnswers[quizIndex]=i;
+
+
+ if(
+   i===
+   quizSets
+   [quizSet]
+   [quizIndex]
+   .a
+ ){
+
+   quizScore++;
+
+ }
+
+
+ renderQuiz();
+
+
+ toast(
+
+   i===
+   quizSets
+   [quizSet]
+   [quizIndex]
+   .a
+
+   ?
+
+   "Correct! +1"
+
+   :
+
+   "Not quite — keep going!"
+
+ );
+
+}
+
+
+function quizNext(){
+
+ if(
+   quizIndex<9
+ ){
+
+   quizIndex++;
+
+   renderQuiz();
+
+ }
+ else{
+
+   toast(
+     "This is the last question. Finish the set to see your result."
+   );
+
+ }
+
+}
+
+
+function quizPrev(){
+
+ if(
+   quizIndex>0
+ ){
+
+   quizIndex--;
+
+   renderQuiz();
+
+ }
+
+}
+
+
+function finishQuiz(){
+
+ let answered=
+ quizAnswers.filter(
+   x=>x!==undefined
+ ).length;
+
+
+ document.getElementById(
+   "quizResult"
+ ).innerHTML=
+
+ `
+ <div class="notice">
+
+ Set ${quizSet+1} complete:
+
+ <strong>
+ ${quizScore}/10
+ </strong>.
+
+ ${
+   answered<10
+   ?
+   "You answered "+answered+" questions."
+   :
+   "Excellent — all questions answered."
+ }
+
+ </div>
+ `;
+
+
+ toast(
+   "Quiz set completed with "+
+   quizScore+
+   "/10."
+ );
+
+}
+
+
+/* ================= MEMORY MATCH ================= */
+
+function startMemory(){
+
+ clearInterval(
+   memory.interval
+ );
+
+
+ let icons=[
+
+   "⚡",
+   "⌨",
+   "📊",
+   "💻",
+   "🔎",
+   "🤝",
+   "🏆",
+   "✦"
+
+ ];
+
+
+ memory.cards=
+ [
+   ...icons,
+   ...icons
+ ]
+ .sort(
+   ()=>Math.random()-.5
+ )
+ .map(
+   (v,i)=>({
+
+     id:i,
+
+     value:v,
+
+     flipped:false,
+
+     matched:false
+
+   })
+ );
+
+
+ memory.first=null;
+
+ memory.second=null;
+
+ memory.lock=false;
+
+ memory.moves=0;
+
+ memory.pairs=0;
+
+ memory.start=Date.now();
+
+
+ memory.interval=
+ setInterval(
+   updateMemoryTime,
+   1000
+ );
+
+
+ renderMemory();
+
+}
+
+
+function updateMemoryTime(){
+
+ if(memory.start){
+
+   let s=
+   Math.floor(
+     (Date.now()-memory.start)/1000
+   );
+
+
+   let m=
+   Math.floor(s/60)
+   .toString()
+   .padStart(2,"0");
+
+
+   let sec=
+   (s%60)
+   .toString()
+   .padStart(2,"0");
+
+
+   document.getElementById(
+     "memoryTime"
+   ).textContent=
+   m+":"+sec;
+
+ }
+
+}
+
+
+function renderMemory(){
+
+ document.getElementById(
+   "memoryMoves"
+ ).textContent=
+ memory.moves;
+
+
+ document.getElementById(
+   "memoryPairs"
+ ).textContent=
+ memory.pairs+
+ "/8";
+
+
+ document.getElementById(
+   "memoryBest"
+ ).textContent=
+ memory.best||
+ "—";
+
+
+ document.getElementById(
+   "memoryGrid"
+ ).innerHTML=
+
+ memory.cards
+ .map(
+
+   (c,i)=>`
+
+   <button
+   class="
+   memory-card
+   ${
+     c.flipped||
+     c.matched
+     ?
+     "flipped"
+     :
+     ""
+   }
+   ${
+     c.matched
+     ?
+     "matched"
+     :
+     ""
+   }
+   "
+   onclick="flipMemory(${i})"
+   >
+
+   ${c.value}
+
+   </button>
+
+   `
+
+ )
+ .join("");
+
+}
+
+
+function flipMemory(i){
+
+ if(
+   memory.lock ||
+   memory.cards[i].flipped ||
+   memory.cards[i].matched
+ )
+   return;
+
+
+ memory.cards[i].flipped=true;
+
+
+ if(
+   memory.first===null
+ ){
+
+   memory.first=i;
+
+   renderMemory();
+
+   return;
+
+ }
+
+
+ memory.second=i;
+
+ memory.moves++;
+
+
+ renderMemory();
+
+
+ let a=
+ memory.cards
+ [memory.first];
+
+
+ let b=
+ memory.cards
+ [memory.second];
+
+
+ if(
+   a.value===
+   b.value
+ ){
+
+   a.matched=true;
+
+   b.matched=true;
+
+
+   memory.pairs++;
+
+
+   memory.first=null;
+
+   memory.second=null;
+
+
+   renderMemory();
+
+
+   if(
+     memory.pairs===8
+   ){
+
+     clearInterval(
+       memory.interval
+     );
+
+
+     let s=
+     Math.floor(
+       (Date.now()-memory.start)/1000
+     );
+
+
+     let score=
+     Math.max(
+       1,
+       1000-
+       memory.moves*25-
+       s*4
+     );
+
+
+     if(
+       score>memory.best
+     ){
+
+       memory.best=score;
+
+
+       localStorage.setItem(
+         "pn_memory_best",
+         score
+       );
+
+     }
+
+
+     renderMemory();
+
+
+     toast(
+       "Memory Match complete! Score: "+
+       score
+     );
+
+   }
+
+ }
+ else{
+
+   memory.lock=true;
+
+
+   setTimeout(
+
+     ()=>{
+
+       a.flipped=false;
+
+       b.flipped=false;
+
+       memory.first=null;
+
+       memory.second=null;
+
+       memory.lock=false;
+
+       renderMemory();
+
+     },
+
+     700
+
+   );
+
+ }
+
+}
+
 
 /* ================= PROFILE ================= */
 
 function renderProfile(){
 
- const u=currentUser;
+ const u=
+ currentUser;
 
 
  document.getElementById(
    "profileName"
  ).textContent=
  u
- ?u.name
- :"Guest Explorer";
+ ?
+ u.name
+ :
+ "Guest Explorer";
 
 
  document.getElementById(
@@ -5235,20 +7316,10 @@ function renderProfile(){
  document.getElementById(
    "profileAvatar"
  ).textContent=
-
  u
-
  ?
-
- u.name
- .split(" ")
- .map(x=>x[0])
- .slice(0,2)
- .join("")
- .toUpperCase()
-
+ initials(u.name)
  :
-
  "G";
 
 
@@ -5281,8 +7352,17 @@ function renderProfile(){
  :
  0;
 
-}
 
+ document.getElementById(
+   "profileStatus"
+ ).textContent=
+ u
+ ?
+ "Logged In"
+ :
+ "Guest";
+
+}
 
 
 /* ================= SYNC ================= */
@@ -5295,7 +7375,7 @@ function syncCurrent(){
  );
 
 
- const idx=
+ let idx=
  users.findIndex(
    x=>x.id===currentUser.id
  );
@@ -5303,7 +7383,8 @@ function syncCurrent(){
 
  if(idx>=0){
 
-   users[idx]=currentUser;
+   users[idx]=
+   currentUser;
 
 
    localStorage.setItem(
@@ -5319,12 +7400,26 @@ function syncCurrent(){
 }
 
 
+/* ================= HELPERS ================= */
 
-/* ================= SECURITY HELPER ================= */
+function initials(s){
+
+ return s
+ .split(" ")
+ .map(
+   x=>x[0]
+ )
+ .slice(0,2)
+ .join("")
+ .toUpperCase();
+
+}
+
 
 function escapeHTML(s){
 
- return String(s).replace(
+ return String(s)
+ .replace(
    /[&<>"']/g,
 
    c=>
@@ -5341,11 +7436,12 @@ function escapeHTML(s){
 }
 
 
-
 /* ================= KEYBOARD ================= */
 
 window.addEventListener(
+
  "keydown",
+
  e=>{
 
    if(
@@ -5357,8 +7453,8 @@ window.addEventListener(
    }
 
  }
-);
 
+);
 
 
 /* ================= INITIALIZE ================= */
@@ -5375,7 +7471,15 @@ renderData();
 
 renderConnections();
 
+renderRequests();
+
+renderFeedback();
+
 renderProfile();
+
+renderQuiz();
+
+startMemory();
 
 
 
@@ -5409,8 +7513,10 @@ function resize(){
    {
      length:
      innerWidth<700
-     ?32
-     :65
+     ?
+     32
+     :
+     65
    },
 
    ()=>({
@@ -5515,24 +7621,26 @@ function animate(){
      j++
    ){
 
-     const dx=
+     let dx=
      ps[i].x-
      ps[j].x;
 
 
-     const dy=
+     let dy=
      ps[i].y-
      ps[j].y;
 
 
-     const d=
+     let d=
      Math.hypot(
        dx,
        dy
      );
 
 
-     if(d<115){
+     if(
+       d<115
+     ){
 
        ctx.strokeStyle=
        `rgba(
